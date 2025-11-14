@@ -1,15 +1,18 @@
 Project Background
-Backround about the company, including the industry, active years, business model, and key business metrics. Explain this from the POV of a data analyst who is working at the company.
+Asprice Makeup, established in 2023, is a Colombian e-commerce brand that sells locally produced makeup through social media platforms.
+The company began with an initial investment of only $30 and quickly grew to generate about $1,500 in monthly sales. In recent months, however, Asprice has experienced a notable decline in performance.
+
+This project analyzes recent sales and operational data to identify the key factors behind the downturn and provide insights that will guide new marketing strategies and strengthen the company’s position in the beauty market.
 
 Insights and recommendations are provided on the following key areas:
 
-Category 1:
-Category 2:
-Category 3:
-Category 4:
-The SQL queries used to inspect and clean the data for this analysis can be found here [link].
+Category 1: An evaluation of historical sales behavior focused on order volume, customer activity, profit, and total sales, identifying patterns that explain recent fluctuations.
+Category 2: Product Level Performance: Analyze products categorized by high performance and understanding their contribution to total sales
+Category 3: Customer deep analysis: Understanding the behavior of customers and how a part of these customers contribute in the overall Sales
+Category 4: Data-driven guidance on marketing actions and campaigns designed to improve sales performance, customer retention, and brand visibility.
+The SQL queries used to clean and explore the data for this analysis can be found here [link].
 
-Targed SQL queries regarding various business questions can be found here [link].
+Targed SQL queries regarding various business questions can be found here https://github.com/Emma922/Asprice-makeup-project/tree/4cc1c1251332ace445af258ec5c966ee5a0ba3b1/sql%20business%20questions.
 
 An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
 
