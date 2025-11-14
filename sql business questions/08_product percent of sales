@@ -1,0 +1,23 @@
+WITH main_query AS
+(
+SELECT 
+p.product_name,
+SUM(o.quantity*p.avg_price) AS Revenue,
+COUNT(quantity) AS QuantitySold,
+COUNT(DISTINCT(o.customer_id)) AS TotalCustomers
+FROM Orders o
+LEFT JOIN [dbo].[Products_noSize_noTone] p
+ON p.product_id=o.product_id
+GROUP BY p.product_name
+)
+SELECT *,
+CONCAT((RunningRevenue/Overall_Revenue)*100,'%') AS Percentage
+FROM
+(SELECT *,
+CASE
+	WHEN Revenue > 100000 THEN 'High Performance'
+	WHEN Revenue > 40000  THEN 'Mid Performance'
+	ELSE 'Low Performance' END AS Product_Segmentation,
+SUM(Revenue) OVER(ORDER BY Revenue DESC) AS RunningRevenue,
+SUM(Revenue) OVER() AS Overall_Revenue
+FROM main_query)t
