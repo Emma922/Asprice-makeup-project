@@ -10,7 +10,8 @@ Category 1: An evaluation of historical sales behavior focused on order volume, 
 Category 2: Product Level Performance: Analyze products categorized by high performance and understanding their contribution to total sales
 Category 3: Customer deep analysis: Understanding the behavior of customers and how a part of these customers contribute in the overall Sales
 Category 4: Data-driven guidance on marketing actions and campaigns designed to improve sales performance, customer retention, and brand visibility.
-The SQL queries used to clean and explore the data for this analysis can be found here [link].
+
+The SQL queries used to clean and explore the data for this analysis can be found here - <a href="https://github.com/Emma922/Asprice-makeup-project/tree/d1281bc116911a94f7f969d4c268b05e2a9f3afb/sql.cleaning_explore">[link]</a>.
 
 Targed SQL queries regarding various business questions can be found here - <a href="https://github.com/Emma922/Asprice-makeup-project/tree/f88984d9cb5a02049d58ad5cb888523d7cdd46bf/sql%20business%20questions">[link]</a>.
 
