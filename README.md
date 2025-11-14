@@ -20,12 +20,10 @@ An interactive Tableau dashboard used to understand and analyze customers behavi
 An interactive Tableau dashboard used to understand and analyze sales and product behavior can be found - <a href="https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupSalesProductsDashboard/SalesProductsDashboard">[here]</a>.
 
 Data Structure & Initial Checks
-The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
+The companies main database structure as seen below consists of four tables: orders, products, customers, with a total row count of 610 records. A description of each table is as follows:
 
-Table 2:
-Table 3:
-Table 4:
-Table 5:
+<img width="631" height="470" alt="Asprice Makeup Dataset drawio" src="https://github.com/user-attachments/assets/ef0f0a6a-37d8-4f4f-8c65-ee2132e10297" />
+
 [Entity Relationship Diagram here]
 
 Executive Summary
