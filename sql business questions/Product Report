@@ -1,0 +1,50 @@
+--==============
+--Product Report
+--==============
+--This report consolidates key product metrics and behaviors.
+
+WITH base_query AS
+(
+SELECT 
+p.product_id,
+o.customer_id,
+o.order_date,
+o.order_number,
+o.quantity,
+p.product_name,
+p.category,
+p.brand,
+p.price,
+p.cost
+FROM Orders o
+LEFT JOIN dbo.Products p
+ON o.product_id = p.product_id
+), 
+Product_Aggregation AS
+(
+SELECT 
+product_id,
+product_name,
+COUNT(order_number) AS TotalOrders,
+SUM(quantity*price) AS TotalSales,
+SUM(quantity) AS TotalQuantitySold,
+COUNT(DISTINCT(customer_id)) AS TotalCustomers
+FROM base_query
+GROUP BY product_id,
+product_name
+)
+--Segmentations of products
+
+SELECT 
+product_id,
+product_name,
+TotalOrders,
+TotalSales,
+TotalQuantitySold,
+TotalCustomers,
+CASE
+	WHEN TotalSales> 150000 AND TotalOrders > 10 THEN 'High Performance Product' 
+	ELSE 'Regular Product'
+END AS Product_Segmentation
+FROM Product_Aggregation
+ORDER BY TotalSales DESC
