@@ -1,0 +1,50 @@
+CREATE VIEW Report_Customers AS
+
+--Base Query: Retrieves core columns from tables
+
+WITH base_query AS
+(
+SELECT
+o.order_date,
+o.order_number,
+c.customer_id,
+CONCAT(c.first_name,' ',c.last_name) AS name,
+c.city,
+c.region,
+o.quantity, 
+p.product_id,
+(o.quantity * p.price) AS Sales
+FROM Orders o
+LEFT JOIN Customers c
+ON o.customer_id = c.customer_id
+LEFT JOIN Products p
+ON o.product_id = p.product_id
+)
+, customer_aggregations AS
+(
+--===================================================================
+--Customer aggregations: Summarizes key metrics at the customer level
+--===================================================================
+SELECT
+customer_id,
+name,
+SUM(Sales) AS TotalSales,
+COUNT(DISTINCT(order_number)) AS TotalOrders,
+COUNT(quantity) AS [Total quantity purchased],
+COUNT(product_id) AS TotalProducts,
+DATEDIFF(MONTH,MAX(order_date),GETDATE()) AS LastOrderinMonths
+FROM base_query
+GROUP BY customer_id,
+name
+)
+--Segmentation of customers into categories
+SELECT 
+*,
+CASE
+	WHEN TotalSales > 150000 AND TotalOrders >= 2
+		THEN 'Potential Loyal Customer'
+	WHEN TotalSales > 200000 THEN 'Targeted Loyal Customer'
+	ELSE 'Normal Customer'
+END AS TypeofCustomers,
+(TotalSales/TotalOrders) AS AOV
+FROM customer_aggregations
