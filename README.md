@@ -17,7 +17,7 @@ Targed SQL queries regarding various business questions can be found here - <a h
 
 An interactive Tableau dashboard used to understand and analyze customers behavior can be found - <a href="https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupDasboard/CustomerDashboard">[here]</a>.
 
-https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupDasboard/CustomerDashboard
+An interactive Tableau dashboard used to understand and analyze sales and product behavior can be found - <a href="https://public.tableau.com/authoring/AspricemakeupDasboard/Dashboard2#1">[here]</a>.
 
 Data Structure & Initial Checks
 The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
