@@ -1,0 +1,117 @@
+--Part-to-whole Analyze
+
+--Categories which contribute the most to overall sales
+
+WITH Total_sales_category AS(
+SELECT 
+category,
+SUM(o.quantity* p.price) AS TotalSales
+FROM Orders o
+LEFT JOIN Products p
+ON o.product_id = p.product_id
+GROUP BY category
+)
+SELECT
+category,
+TotalSales,
+SUM(TotalSales) OVER() AS OverallSales,
+CONCAT(ROUND((TotalSales / SUM(TotalSales) OVER())*100,1), '%') AS PercentageofTotal
+FROM Total_sales_category
+ORDER BY TotalSales DESC
+
+--Brands which contribute the most to overall sales
+WITH Total_sales_brand AS(
+SELECT 
+brand,
+SUM(o.quantity* p.price) AS TotalSales
+FROM Orders o
+LEFT JOIN Products p
+ON o.product_id = p.product_id
+GROUP BY brand
+)
+SELECT
+brand,
+TotalSales,
+SUM(TotalSales) OVER() AS OverallSales,
+CONCAT(ROUND((TotalSales / SUM(TotalSales) OVER())*100,1), '%') AS PercentageofTotal
+FROM Total_sales_brand
+ORDER BY TotalSales DESC
+
+--Regions which contribute to the overall sales
+WITH Revenue_per_region AS (
+SELECT 
+c.region,
+SUM(p.price * o.quantity) AS Revenue
+FROM Orders o
+LEFT JOIN Customers c
+ON o.customer_id = c.customer_id
+LEFT JOIN Products p
+ON o.product_id = p.product_id
+GROUP BY c.region
+)
+
+SELECT 
+region,
+Revenue,
+SUM(Revenue) OVER() AS Overall_Revenue,
+CONCAT(ROUND((Revenue/ SUM(Revenue) OVER())* 100,1),'%') AS PercentageofTotal
+FROM Revenue_per_region
+ORDER BY Revenue DESC
+
+--Segmentation of products by cost
+WITH cost_range AS
+(SELECT 
+product_id,
+product_name,
+cost,
+CASE 
+	WHEN cost > 20000 THEN 'High Cost'
+	WHEN cost BETWEEN 10000 AND 20000 THEN 'Medium Cost'
+	WHEN cost < 10000 THEN 'Low Cost'
+END AS Segmentation
+FROM Products)
+
+SELECT 
+Segmentation,
+COUNT(product_id) AS NumberofProducts
+FROM cost_range
+GROUP BY Segmentation 
+ORDER BY NumberofProducts DESC
+
+
+--Customers segmentation
+
+
+WITH Order_per_Customers AS
+(
+SELECT 
+c.customer_id,
+c.first_name,
+c.last_name,
+COUNT(DISTINCT(order_number))  AS QuantityofOrders,
+SUM(o.quantity*p.price) AS Revenue
+FROM Orders o
+LEFT JOIN Customers c
+ON o.customer_id = c.customer_id
+LEFT JOIN Products p
+ON o.product_id = p.product_id
+GROUP BY c.customer_id,
+c.first_name,
+c.last_name
+), Customer_Segmentation AS
+(
+SELECT
+*,
+CASE
+	WHEN QuantityofOrders >= 2 AND Revenue > 250000
+		THEN 'VIP Customer'
+	ELSE 'Regular Customer'
+END AS TypeofCustomer
+FROM Order_per_Customers
+)
+SELECT 
+TypeofCustomer,
+COUNT(TypeofCustomer) AS NumberofCustomers
+FROM Customer_Segmentation
+GROUP BY TypeofCustomer
+--Total Nr. Of customers by each group
