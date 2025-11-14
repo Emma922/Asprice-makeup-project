@@ -1,0 +1,61 @@
+--Sales performance and Total Customers over time
+SELECT 
+MONTH(order_date) AS Month,
+DATENAME(MONTH,order_date) AS Month_name,
+SUM(quantity * price) AS Revenue,
+COUNT (DISTINCT((c.customer_id))) AS TotalCustomers
+FROM Orders o
+LEFT JOIN Products p
+ON o.product_id = p.product_id
+LEFT JOIN Customers c
+ON o.customer_id = c.customer_id
+GROUP BY MONTH(order_date), DATENAME(MONTH,order_date)
+ORDER BY MONTH(order_date)
+
+--Running Total Sales per month
+SELECT
+Month,
+TotalSales,
+SUM(TotalSales) OVER(ORDER BY Month) AS RunningTotalSales
+FROM
+(SELECT 
+MONTH(order_date) AS Month,
+SUM(quantity * price) AS TotalSales
+FROM Orders o
+LEFT JOIN Products p
+ON o.product_id = p.product_id
+GROUP BY MONTH(order_date))t
+
+/*Monthly performance of products by comparing their sales to both 
+the avg sales performance of the product and the previous year's sales*/
+
+WITH monthly_product_sales AS (
+SELECT 
+MONTH(order_date) AS order_month,
+p.product_name,
+SUM(o.quantity * p.price) AS current_sales
+FROM Orders o
+LEFT JOIN Products p
+ON o.product_id = p.product_id
+GROUP BY 
+MONTH(order_date),
+p.product_name
+)
+SELECT 
+order_month,
+product_name,
+current_sales,
+AVG(current_sales) OVER(PARTITION BY product_name) AS AvgSales,
+current_sales - AVG(current_sales) OVER(PARTITION BY product_name) AS diff_avg,
+CASE WHEN current_sales - AVG(current_sales) OVER(PARTITION BY product_name) > 0 THEN 'Above Avg'
+WHEN current_sales - AVG(current_sales) OVER(PARTITION BY product_name) < 0 THEN 'Below Avg'
+ELSE 'Avg'
+END AS AvgChange,
+LAG(current_sales) OVER(PARTITION BY product_name ORDER BY order_month) AS pm_sales,
+current_sales - LAG(current_sales) OVER(PARTITION BY product_name ORDER BY order_month) AS diff_pm,
+CASE WHEN current_sales - LAG(current_sales) OVER(PARTITION BY product_name ORDER BY order_month) > 0 THEN 'Increase'
+WHEN current_sales - LAG(current_sales) OVER(PARTITION BY product_name ORDER BY order_month) < 0 THEN 'Decrease'
+ELSE 'No Change'
+END AS pm_change
+FROM monthly_product_sales
+ORDER BY product_name, order_month
