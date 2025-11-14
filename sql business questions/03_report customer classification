@@ -1,0 +1,72 @@
+
+CREATE VIEW Report_Customer_Classification AS
+
+-- Main Query
+WITH base_query AS
+(
+    SELECT
+        o.order_date,
+        o.order_number,
+        c.customer_id,
+        CONCAT(c.first_name,' ',c.last_name) AS name,
+        c.city,
+        c.region,
+        o.quantity, 
+        p.product_id,
+        (o.quantity * p.price) AS Sales
+    FROM Orders o
+    LEFT JOIN Customers c ON o.customer_id = c.customer_id
+    LEFT JOIN Products p ON o.product_id = p.product_id
+),
+
+-- Calculate total orders and total sales per customer
+customer_aggregations AS
+(
+    SELECT 
+        customer_id,
+        name,
+        COUNT(DISTINCT order_number) AS TotalOrders,
+        SUM(Sales) AS TotalSales
+    FROM base_query
+    GROUP BY customer_id, name
+),
+
+-- Classify customers 
+customer_classification AS
+(
+    SELECT 
+        customer_id,
+        name,
+        TotalOrders,
+        TotalSales,
+        CASE 
+            WHEN TotalOrders >= 2 THEN 'Potential Loyal Customer'
+            WHEN TotalSales >= 200000 THEN 'Targered Loyal Customer'
+            ELSE 'Normal Customer'
+        END AS Customer_Classification
+    FROM customer_aggregations
+),
+
+-- Summarize total sales and orders by customer segment
+sales_by_classification AS
+(
+    SELECT 
+        Customer_Classification,
+        SUM(TotalSales) AS TotalSalesByClassification,
+        SUM(SUM(TotalSales)) OVER () AS GrandTotalSales,
+        COUNT(TotalOrders) AS TotalOrders,
+        SUM(COUNT(TotalOrders)) OVER() AS GrandTotalOrders
+    FROM customer_classification
+    GROUP BY Customer_Classification
+)
+
+-- Final percentages
+SELECT 
+    Customer_Classification,
+    TotalSalesByClassification,
+    GrandTotalSales,
+    TotalOrders,
+    GrandTotalOrders,
+    CAST(TotalSalesByClassification AS FLOAT) / GrandTotalSales * 100 AS SalesPercentage,
+    CAST(TotalOrders AS FLOAT) / GrandTotalOrders * 100 AS OrdersPercentage
+FROM sales_by_classification;
