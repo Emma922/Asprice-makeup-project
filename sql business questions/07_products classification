@@ -1,0 +1,37 @@
+ALTER VIEW dbo.FewormultiOrders AS
+
+WITH main_query AS
+(
+SELECT
+order_number,
+COUNT(DISTINCT(product_id)) AS TotalProducts
+FROM Orders o
+GROUP BY order_number
+), joining_data AS
+(
+SELECT 
+o.order_number,
+p.product_name,
+TotalProducts
+FROM Orders o
+INNER JOIN main_query m
+ON o.order_number=m.order_number
+INNER JOIN Products_noSize_noTone p
+ON o.product_id=p.product_id
+), Typeoforders AS
+(
+SELECT *,
+CASE 
+	WHEN TotalProducts <= 3 THEN 'Few_units_Order'
+	ELSE 'MultiProduct_Order' END AS Typeoforders
+FROM joining_data
+) 
+SELECT 
+product_name,
+COUNT(*) AS TotalOrders,
+SUM(CASE WHEN Typeoforders = 'Few_units_Order' THEN 1 ELSE 0 END) AS Few_units_Order,
+SUM(CASE WHEN Typeoforders = 'MultiProduct_Order' THEN 1 ELSE 0 END) AS MultiProduct_Order,
+CONCAT((SUM(CASE WHEN Typeoforders = 'Few_units_Order' THEN 1.0 ELSE 0 END)/COUNT(*))*100,'%') AS Percent_fewunits,
+CONCAT((SUM(CASE WHEN Typeoforders = 'MultiProduct_Order' THEN 1.0 ELSE 0 END)/COUNT(*))*100,'%') AS Percent_MultiProduct
+FROM Typeoforders
+GROUP BY product_name
