@@ -15,7 +15,9 @@ The SQL queries used to clean and explore the data for this analysis can be foun
 
 Targed SQL queries regarding various business questions can be found here - <a href="https://github.com/Emma922/Asprice-makeup-project/tree/f88984d9cb5a02049d58ad5cb888523d7cdd46bf/sql%20business%20questions">[link]</a>.
 
-An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
+An interactive Tableau dashboard used to understand and analyze customers behavior can be found - <a href="https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupDasboard/CustomerDashboard">[here]</a>.
+
+https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupDasboard/CustomerDashboard
 
 Data Structure & Initial Checks
 The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
