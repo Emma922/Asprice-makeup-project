@@ -12,7 +12,7 @@ Category 3: Customer deep analysis: Understanding the behavior of customers and 
 Category 4: Data-driven guidance on marketing actions and campaigns designed to improve sales performance, customer retention, and brand visibility.
 The SQL queries used to clean and explore the data for this analysis can be found here [link].
 
-Targed SQL queries regarding various business questions can be found here https://github.com/Emma922/Asprice-makeup-project/tree/4cc1c1251332ace445af258ec5c966ee5a0ba3b1/sql%20business%20questions.
+Targed SQL queries regarding various business questions can be found here [sql business questions].
 
 An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
 
