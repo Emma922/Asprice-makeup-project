@@ -1,0 +1,22 @@
+ALTER VIEW AOVperProduct AS
+
+WITH main_query AS
+(
+SELECT 
+p.product_name,
+COUNT(order_number) TotalOrders,
+SUM(o.quantity*p.avg_price) AS TotalSales,
+(SUM(o.quantity*p.avg_price)/COUNT(order_number)) AS AOVperProducts
+FROM Orders o
+LEFT JOIN  [dbo].[Products_noSize_noTone] p
+ON o.product_id=p.product_id
+GROUP BY p.product_name
+)
+
+SELECT
+*,
+CONCAT(((AOVperProducts - OveralllAvg)/OveralllAvg)*100, '%') AS percentage
+FROM
+(SELECT *,
+AVG(AOVperProducts) OVER() AS OveralllAvg
+FROM main_query)t
