@@ -7,8 +7,11 @@ This project analyzes recent sales and operational data to identify the key fact
 Insights and recommendations are provided on the following key areas:
 
 Category 1: An evaluation of historical sales behavior focused on order volume, customer activity, profit, and total sales, identifying patterns that explain recent fluctuations.
+
 Category 2: Product Level Performance: Analyze products categorized by high performance and understanding their contribution to total sales
+
 Category 3: Customer deep analysis: Understanding the behavior of customers and how a part of these customers contribute in the overall Sales
+
 Category 4: Data-driven guidance on marketing actions and campaigns designed to improve sales performance, customer retention, and brand visibility.
 
 The SQL queries used to clean and explore the data for this analysis can be found here - <a href="https://github.com/Emma922/Asprice-makeup-project/tree/d1281bc116911a94f7f969d4c268b05e2a9f3afb/sql.cleaning_explore">[link]</a>.
@@ -24,11 +27,19 @@ The companies main database structure as seen below consists of four tables: ord
 
 <img width="631" height="470" alt="Asprice Makeup Dataset drawio" src="https://github.com/user-attachments/assets/ef0f0a6a-37d8-4f4f-8c65-ee2132e10297" />
 
-[Entity Relationship Diagram here]
 
 Executive Summary
 Overview of Findings
-Explain the overarching findings, trends, and themes in 2-3 sentences here. This section should address the question: "If a stakeholder were to take away 3 main insights from your project, what are the most important things they should know?" You can put yourself in the shoes of a specific stakeholder - for example, a marketing manager or finance director - to think creatively about this section.
+
+Asprice Makeup experienced steady growth during previous months, but recently sales have declined sharply, reaching decreases of up to 83 percent. The analysis suggests that this drop is likely related to the lack of a customer loyalty program, an unfocused marketing strategy, limited promotional offers, and the absence of wholesale channels.
+
+Sales distribution follows a clear 20–80 pattern, where a small number of brands and products generate most of the company’s revenue. Customer segmentation also shows that a small group of potential loyal customers contributes up to 36 percent of total sales and provides consistent monthly purchases.
+
+The top-performing products, identified as the ten most sold and most frequently purchased items, account for 35 percent of total sales. This indicates a strong dependence on a limited product portfolio.
+
+These findings suggest that Asprice could improve its performance by developing a customer loyalty program, strengthening marketing campaigns around its best-selling brands and products, offering targeted promotions, and opening wholesale channels to reach a wider customer base.
+
+Below is the overview page from the Tableau dashboard and more examples are provided throgouth the report. The entire interactive dashboard can be downloaded - <a href="https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupDasboard/CustomerDashboard">[here]</a>. and  - <a href="https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupSalesProductsDashboard/SalesProductsDashboard">[here]</a>.
 
 [Visualization, including a graph of overall trends or snapshot of a dashboard]
 
