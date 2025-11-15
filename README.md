@@ -40,7 +40,7 @@ Below is the overview page from the Tableau dashboard and more examples are prov
 Insights Deep Dive
 Customer Loyalty:
 
--Despite currently there are not loyal customer we classified them as people that has bought 2 o more times and has bought more than 200 COP, because there are patterns that could make these people possible loyal customers
+-Despite currently there are not loyal customer we classified them as people that has bought 2 o more times and has bought more than 200K COP, because there are patterns that could make these people possible loyal customers
 
 - Possible loyal customers contributes in more than 3rd part of the overall sales (36%), it makes it more important when we take into account that those customers represent 15% of customers
 
@@ -50,23 +50,30 @@ Customer Loyalty:
 
 <img width="577" height="358" alt="Screenshot 2025-11-14 204058" src="https://github.com/user-attachments/assets/9bb208e5-6a2c-481d-984c-f8b30292b3dc" />
 
-<img width="847" height="462" alt="Screenshot 2025-11-14 204147" src="https://github.com/user-attachments/assets/2764e60c-b0cd-4e1c-81da-4c86bcc61a92" />
+Products and brand distribution:
 
-Category 2:
-Main insight 1. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+-18% of brands represent 79% of overall sales, it shows a strong participation of these brands which suggest take into account these brand in marketing sales
 
-Main insight 2. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+-20% of brands represent 60% of overall sales and top performing products provides 35% of sales. It says to us that most sales are represented by few products
 
-Main insight 3. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+-Top 3 brands represent more than 60% of sales, overall few products and brands represent a lot of sales and orders in the company
 
-Main insight 4. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+-Only one product generates almost 10% of total sales of company.
 
-[Visualization specific to category 2]
+<img width="1329" height="690" alt="Screenshot 2025-11-14 210911" src="https://github.com/user-attachments/assets/e28a604c-0ed3-4d77-a221-a20a4a1f3de2" />
 
-Category 3:
-Main insight 1. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
 
-Main insight 2. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+AOV value per customer:
+
+-All metrics has dropped by last months but there is only that, instead, has increased AOV
+
+-It reflects a improvement in customer behavior, it is due to the implementation of wholesales sales
+
+-Since the wholesales sales launched in september 7 we observed a increase in AOV per customer
+
+<img width="777" height="394" alt="Screenshot 2025-11-14 211406" src="https://github.com/user-attachments/assets/c02efdc7-909e-4966-ae4d-94e52f3871f6" />
+
+
 
 Main insight 3. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
 
