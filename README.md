@@ -31,29 +31,26 @@ The companies main database structure as seen below consists of four tables: ord
 Executive Summary
 Overview of Findings
 
-Asprice Makeup experienced steady growth during previous months, but recently sales have declined sharply, reaching decreases of up to 83 percent. The analysis suggests that this drop is likely related to the lack of a customer loyalty program, an unfocused marketing strategy, limited promotional offers, and the absence of wholesale channels.
-
-Sales distribution follows a clear 20–80 pattern, where a small number of brands and products generate most of the company’s revenue. Customer segmentation also shows that a small group of potential loyal customers contributes up to 36 percent of total sales and provides consistent monthly purchases.
-
-The top-performing products, identified as the ten most sold and most frequently purchased items, account for 35 percent of total sales. This indicates a strong dependence on a limited product portfolio.
-
-These findings suggest that Asprice could improve its performance by developing a customer loyalty program, strengthening marketing campaigns around its best-selling brands and products, offering targeted promotions, and opening wholesale channels to reach a wider customer base.
+Asprice Makeup showed steady growth earlier in the year, but recent sales dropped sharply, reaching declines of up to 83 percent. The analysis indicates that the absence of a loyalty program, weak marketing focus, limited promotions, and the lack of wholesale channels contributed to this decline. The data also shows a strong 20–80 pattern, where a small group of brands, products, and customers drive most revenue. The top ten products account for 35 percent of total sales, reflecting a heavy dependency on a limited catalog. Based on these findings, the company would benefit from implementing a loyalty program, focusing marketing efforts on high-performing products, introducing targeted promotions, and expanding into wholesale distribution.
 
 Below is the overview page from the Tableau dashboard and more examples are provided throgouth the report. The entire interactive dashboard can be downloaded - <a href="https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupDasboard/CustomerDashboard">[here]</a>. and  - <a href="https://public.tableau.com/app/profile/emmanuel.casta.o/viz/AspricemakeupSalesProductsDashboard/SalesProductsDashboard">[here]</a>.
+<img width="1976" height="1799" alt="Sales   Products Dashboard" src="https://github.com/user-attachments/assets/ed7de8cd-8bb7-4a96-8d80-0e9c898971cc" />
 
-[Visualization, including a graph of overall trends or snapshot of a dashboard]
 
 Insights Deep Dive
-Category 1:
-Main insight 1. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+Customer Loyalty:
 
-Main insight 2. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+-Despite currently there are not loyal customer we classified them as people that has bought 2 o more times and has bought more than 200 COP, because there are patterns that could make these people possible loyal customers
 
-Main insight 3. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+- Possible loyal customers contributes in more than 3rd part of the overall sales (36%), it makes it more important when we take into account that those customers represent 15% of customers
 
-Main insight 4. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+-Most difficult months like September and october were helped by this possible loyal customers, about 40% of sales comes from them
 
-[Visualization specific to category 1]
+-Possible loyal customers provides company with highest AOV and number of orders.
+
+<img width="577" height="358" alt="Screenshot 2025-11-14 204058" src="https://github.com/user-attachments/assets/9bb208e5-6a2c-481d-984c-f8b30292b3dc" />
+
+<img width="847" height="462" alt="Screenshot 2025-11-14 204147" src="https://github.com/user-attachments/assets/2764e60c-b0cd-4e1c-81da-4c86bcc61a92" />
 
 Category 2:
 Main insight 1. More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
