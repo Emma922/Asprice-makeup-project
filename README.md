@@ -92,6 +92,8 @@ Below is a sample overview from the Tableau dashboard. The full interactive dash
 
 ## Recommendations
 
+[Slides for the presentation to stakeholder](https://docs.google.com/presentation/d/1xkthZlvwGp6-4XZL--Y854IirkcQPrbLGQei1kBC0mY/edit?slide=id.g390c52f68dd_0_1576#slide=id.g390c52f68dd_0_1576)
+
 Based on the analysis, the following actions are recommended to the stakeholder team:
 
 - **Customer Loyalty is a strong growth opportunity:**  
@@ -113,6 +115,7 @@ Based on the analysis, the following actions are recommended to the stakeholder 
 
 - **Expand product bundles:**  
   Create new product bundles or allow customers to customize bundles including high-performing or top 20% products to drive sales.
+
 
   ## Project Limitations
 
