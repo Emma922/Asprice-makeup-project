@@ -63,10 +63,12 @@ Below is a sample overview from the Tableau dashboard. The full interactive dash
 
 ### Customer Loyalty
 
-- Asprice currently has no formal loyal customer program. “Potential loyal customers” are defined as those with 2+ purchases and over 200,000 COP spent.
-- This group makes up only **15% of customers** but contributes **36% of total sales**.
-- During the toughest months (September and October), they generated about **40% of total revenue**, helping stabilize sales.
-- They have the highest Average Order Value (AOV) and number of orders, making them a key segment for future loyalty strategies.
+Asprice currently operates without a formal loyalty program. For the purpose of this analysis, a hypothetical segmentation was constructed to illustrate how loyalty tiers could impact overall sales. “Potential loyal customers” were defined as those with at least two purchases and cumulative spending above 200,000 COP, and "Targeted loyal customers" as those with a cumulative spending above 200,000 COP. This imaginary segmentation serves as an analytical framework, allowing the evaluation of how targeted loyal customer groups might influence revenue distribution, retention strategies, and upsell opportunities.
+
+- “Potential loyal customers” makes up only **15% of customers** but contributes **36% of total sales**.
+- During the toughest months (September and October), “Potential loyal customers” generated about **40% of total revenue**, helping stabilize sales.
+- “Potential loyal customers” have the highest Average Order Value (AOV) and number of orders, making them a key segment for future loyalty strategies.
+- "Targeted loyal customers" accounted for similar numbers, making this segment crucial as well.
 
 ![Customer Loyalty Snapshot](https://github.com/user-attachments/assets/9bb208e5-6a2c-481d-984c-f8b30292b3dc)
 
