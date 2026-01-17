@@ -119,37 +119,17 @@ Based on the analysis, the following actions are recommended to the stakeholder 
 
 Despite providing valuable insights into Asprice Makeup’s recent performance, this analysis is subject to several important limitations that should be considered when interpreting the results:
 
-### 1. Limited Historical Data (Only 4 Months Available)
-The dataset covers only a four-month period, which is insufficient to identify long-term patterns, seasonal trends, or year-over-year behavior. This constraint may lead to partial or misleading conclusions about customer retention, product performance, or revenue trends.
+### Short Data Window  
+Only four months of data are available, limiting the ability to identify long‑term trends, seasonality, or reliable forecasts.
 
-### 2. Lack of Customer Information
+### Limited Customer Information  
+Key attributes such as demographics, lifetime value, and repeat purchase behavior are missing, restricting deeper segmentation and loyalty analysis.
 
-The analysis is limited by the scarcity of detailed customer-related data. Additional fields that would significantly improve segmentation and behavioral insights include:
-- Customer demographics such as age, gender, income level, and education.
-- Long-term purchasing behavior (repeat purchases, churn patterns, and lifetime value).
-  
-Moreover, the available customer data spans only four months, which restricts the ability to determine whether the average time between purchases typically exceeds this period. After consulting with the stakeholder, it was confirmed that the business has very low customer loyalty, with only a small number of repeat buyers. However, due to the short data window, these patterns cannot be fully validated or analyzed in depth.
+### Operational & External Gaps  
+Data excludes inventory, fulfillment, returns, and external influences (competitors, economic conditions, seasonal demand), reducing context for performance drivers.
 
-### 3. Limited Operational Data
-Important operational fields such as inventory availability, fulfillment/processing times, stockouts, and return rates were not included. This limits the ability to diagnose operational issues that could impact sales performance or customer satisfaction.
-
-### 5. Short Time Frame for Reliable Forecasting
-Due to the limited time range, it is not statistically sound to generate reliable forecasts or predictive models. Any projection based on this dataset would be highly unstable and is not recommended.
-
-### 6. External Factors Not Considered
-Important external influences such as:
-- Changes in social media algorithms
-- Competitor actions
-- Economic conditions
-- Seasonal demand variations within the beauty industry
-
-were not included in the dataset, limiting the contextual interpretation of performance patterns.
-
-### 7. Need for Ongoing Data Collection
-Given these limitations, the current analysis should be considered preliminary. A more robust evaluation will be possible once additional data is collected, including:
-- Longer historical sales data
-- More detailed customer attributes
-- Marketing and operational metrics
+### Need for Ongoing Collection  
+Findings should be considered preliminary. A more robust evaluation requires longer historical data, richer customer attributes, and operational metrics.
 
 Future iterations of this project will be able to incorporate these elements for a more complete and accurate assessment.
 
