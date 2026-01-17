@@ -78,7 +78,7 @@ Asprice currently operates without a formal loyalty program. For the purpose of 
   - Only **18% of brands** generate **79% of total revenue**.
   - **20% of products** represent **60% of overall sales**.
   - The top-performing products contribute **35% of total revenue**.
-  - One product alone accounts for about **10% of total revenue**, revealing significant dependence on a small product base.
+  - Corrector Bloom alone accounts for about **10% of total revenue**, revealing significant dependence on a small product base.
 
 ![Brand and Product Distribution](https://github.com/user-attachments/assets/e28a604c-0ed3-4d77-a221-a20a4a1f3de2)
 
