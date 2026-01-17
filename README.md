@@ -100,7 +100,7 @@ Based on the analysis, the following actions are recommended to the stakeholder 
   Develop and launch a formal loyalty program rewarding repeat customers with gifts, special offers, or exclusive bundles to encourage retention.
 
 - **Encourage purchases of top brands:**  
-  Run targeted promotions or marketing campaigns promoting the top 5 brands to increase average order value (AOV) and sales volume.
+  Run targeted promotions or marketing campaigns promoting the top 5 brands in sales and profit to increase average order value (AOV) and sales volume.
 
 - **Promote high-performing products at checkout:**  
   Recommend these products during the checkout process and offer exclusive discounts to increase sales and AOV.
