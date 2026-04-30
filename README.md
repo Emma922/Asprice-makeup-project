@@ -117,9 +117,9 @@ Based on the analysis, the following actions are recommended to the stakeholder 
 - **Expand product bundles:**  
   Create new product bundles or allow customers to customize bundles including high-performing or top 20% products to drive sales.
 
-- **Project Scope & Notes:**
+**Project Scope & Notes:**
 
-- Data covers 4 months (June–September 2024) – sufficient to identify recent decline but not long-term seasonality
+- Data covers 4 months (June–September 2025) – sufficient to identify recent decline but not long-term seasonality
 
 - No loyalty program existed, so “potential loyal customers” were defined using purchase frequency and spending thresholds
 
