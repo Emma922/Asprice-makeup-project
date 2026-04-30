@@ -2,7 +2,8 @@
 
 ## Project Background
 
-Asprice Makeup, established in 2023, is a Colombian e-commerce brand that sells locally produced makeup through social media platforms. The company began with an initial investment of only $30 and quickly grew to generate about $1,500 in monthly sales. However, in recent months, Asprice has experienced a notable decline in performance.
+Asprice Makeup, established in 2023, is a real Colombian e-commerce brand that sells locally produced makeup through social media platforms. The company began with an initial investment of only $30 and quickly grew to generate about $1,500 in monthly sales. However, in recent months, Asprice has experienced a notable decline in performance. 
+Asprice Makeup's owner asked me to diagnose the sales drop and recommend actionable fixes.
 
 This project analyzes recent sales and operational data to identify the key factors behind the downturn and provide insights to guide new marketing strategies and strengthen the company’s position in the beauty market.
 
@@ -116,24 +117,13 @@ Based on the analysis, the following actions are recommended to the stakeholder 
 - **Expand product bundles:**  
   Create new product bundles or allow customers to customize bundles including high-performing or top 20% products to drive sales.
 
+- **Project Scope & Notes:**
 
-  ## Project Limitations
+- Data covers 4 months (June–September 2024) – sufficient to identify recent decline but not long-term seasonality
 
-Despite providing valuable insights into Asprice Makeup’s recent performance, this analysis is subject to several important limitations that should be considered when interpreting the results:
+- No loyalty program existed, so “potential loyal customers” were defined using purchase frequency and spending thresholds
 
-### Short Data Window  
-Only four months of data are available, limiting the ability to identify long‑term trends, seasonality, or reliable forecasts.
-
-### Limited Customer Information  
-Key attributes such as demographics, lifetime value, and repeat purchase behavior are missing, restricting deeper segmentation and loyalty analysis.
-
-### Operational & External Gaps  
-Data excludes inventory, fulfillment, returns, and external influences (competitors, economic conditions, seasonal demand), reducing context for performance drivers.
-
-### Need for Ongoing Collection  
-Findings should be considered preliminary. A more robust evaluation requires longer historical data, richer customer attributes, and operational metrics.
-
-Future iterations of this project will be able to incorporate these elements for a more complete and accurate assessment.
+- Analysis focuses on sales and customer behavior; inventory and returns data were not available
 
 [Slides for the presentation to stakeholder](https://docs.google.com/presentation/d/1xkthZlvwGp6-4XZL--Y854IirkcQPrbLGQei1kBC0mY/edit?slide=id.g390c52f68dd_0_1576#slide=id.g390c52f68dd_0_1576)
 
