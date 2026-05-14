@@ -4,7 +4,7 @@
 
 Asprice Makeup is a Colombian e-commerce brand that sells locally produced cosmetics through social media. Founded in 2023 with an initial investment of $30, the company scaled to roughly $1,500 in monthly revenue — but began experiencing a sharp sales decline that threatened that growth.
 
-The brand owner hired me to diagnose the root cause of the drop and deliver actionable recommendations. Working with 4 months of real transactional data (610 records across orders, products, and customers), I conducted end-to-end analysis: data cleaning in SQL, exploratory analysis, customer segmentation, and product performance evaluation — all presented through interactive Tableau dashboards and a stakeholder presentation.
+I completed a consulting project focused on identifying root causes of sales decline. Working with 4 months of real transactional data (610 records across orders, products, and customers), I conducted end-to-end analysis: data cleaning in SQL, exploratory analysis, customer segmentation, and product performance evaluation — all presented through interactive Tableau dashboards and a stakeholder presentation.
 
 **The analysis is organized around four key areas:**
 
